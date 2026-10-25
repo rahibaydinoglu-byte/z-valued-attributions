@@ -1,0 +1,8 @@
+NF-UNSW-NB15-v3.zip: rows 2,365,424 | attack share 0.054 | span 648.7 h | src hosts>= 40 | 7s
+    {'Benign': 2237731, 'Exploits': 42748, 'Fuzzers': 33816, 'Generic': 19651, 'Reconnaissance': 17074, 'DoS': 5980, 'Backdoor': 4659, 'Shellcode': 2381, 'Analysis': 1226, 'Worms': 158}
+NF-BoT-IoT-v3.zip: rows 16,933,808 | attack share 0.997 | span 843.8 h | src hosts>= 20 | 38s
+    {'DoS': 8034190, 'DDoS': 7150882, 'Reconnaissance': 1695132, 'Benign': 51989, 'Theft': 1615}
+NF-ToN-IoT-v3.zip: rows 27,520,260 | attack share 0.390 | span 144.6 h | src hosts>= 5372 | 63s
+    {'Benign': 16792214, 'ddos': 4141256, 'xss': 2834435, 'password': 1594777, 'scanning': 1358977, 'injection': 381777, 'dos': 203456, 'Backdoor': 203384, 'mitm': 6013, 'ransomware': 3971}
+NF-CICIDS2018-v3.zip: rows 20,115,529 | attack share 0.129 | span 391.6 h | src hosts>= 5000 | 57s
+    {'Benign': 17514626, 'DDOS_attack-HOIC': 1032311, 'FTP-BruteForce': 386720, 'DDoS_attacks-LOIC-HTTP': 288589, 'Bot': 207703, 'SSH-Bruteforce': 188474, 'Infilteration': 188152, 'DoS_attacks-SlowHTTPTest': 105550, 'DoS_attacks-Hulk': 100076, 'DoS_attacks-GoldenEye': 61300, 'DoS_attacks-Slowloris': 36040, 'DDOS_attack-LOIC-UDP': 3450, 'Brute_Force_-Web': 1618, 'Brute_Force_-XSS': 480, 'SQL_Injection': 440}

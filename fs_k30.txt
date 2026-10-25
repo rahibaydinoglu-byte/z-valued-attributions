@@ -1,0 +1,30 @@
+destination port
+protocol
+flow duration
+total fwd packets
+total backward packets
+total length of fwd packets
+total length of bwd packets
+fwd packet length max
+fwd packet length min
+fwd packet length mean
+fwd packet length std
+bwd packet length max
+bwd packet length min
+bwd packet length mean
+bwd packet length std
+flow bytes/s
+flow packets/s
+flow iat mean
+flow iat std
+flow iat max
+flow iat min
+fwd iat total
+fwd iat std
+fwd iat min
+bwd iat total
+bwd iat mean
+bwd iat std
+bwd iat min
+fwd psh flags
+fwd header length
