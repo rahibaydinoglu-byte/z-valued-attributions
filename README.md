@@ -84,7 +84,7 @@ The protocols in `protocols/` were frozen at the stated dates, before the outcom
 
 ## Citation
 
-Please cite the paper (details will be added on acceptance) and this archive (DOI to be added on release).
+Please cite the paper (details will be added on acceptance) and this archive: Imamguluyev, R. (2026). *Z-valued feature attributions under unreliable supervision: code, protocols and results* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.23645353
 
 ## License
 

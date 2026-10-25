@@ -7,5 +7,7 @@ authors:
     orcid: "https://orcid.org/0000-0002-3998-7901"
     affiliation: "Baku Business University"
 version: 1.0.0
+doi: 10.5281/zenodo.23645353
+repository-code: "https://github.com/rahibaydinoglu-byte/z-valued-attributions"
 date-released: 2026-10-25
 license: MIT
