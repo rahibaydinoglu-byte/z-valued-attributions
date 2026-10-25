@@ -1,0 +1,71 @@
+{
+ "dataset": "NF-UNSW-NB15-v3",
+ "seed": 200,
+ "train_noise": 0.025666666666666667,
+ "evidence": [
+  {
+   "lift": 1,
+   "recall": 0.9,
+   "precision": 0.025666666666666667,
+   "capped": false,
+   "flagged": 5299
+  },
+  {
+   "lift": 1.5,
+   "recall": 0.9,
+   "precision": 0.0385,
+   "capped": false,
+   "flagged": 3584
+  },
+  {
+   "lift": 2,
+   "recall": 0.9,
+   "precision": 0.051333333333333335,
+   "capped": false,
+   "flagged": 2669
+  },
+  {
+   "lift": 3,
+   "recall": 0.9,
+   "precision": 0.077,
+   "capped": false,
+   "flagged": 1701
+  },
+  {
+   "lift": 5,
+   "recall": 0.9,
+   "precision": 0.12833333333333333,
+   "capped": false,
+   "flagged": 1106
+  },
+  {
+   "lift": 10,
+   "recall": 0.9,
+   "precision": 0.25666666666666665,
+   "capped": false,
+   "flagged": 545
+  },
+  {
+   "lift": 20,
+   "recall": 0.9,
+   "precision": 0.5133333333333333,
+   "capped": false,
+   "flagged": 271
+  },
+  {
+   "lift": 3,
+   "recall": 0.5,
+   "precision": 0.077,
+   "capped": false,
+   "flagged": 870
+  },
+  {
+   "lift": 10,
+   "recall": 0.5,
+   "precision": 0.25666666666666665,
+   "capped": false,
+   "flagged": 316
+  }
+ ],
+ "seconds": 457.50087547302246
+}

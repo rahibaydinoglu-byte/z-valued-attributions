@@ -1,0 +1,71 @@
+{
+ "dataset": "NF-ToN-IoT-v3",
+ "seed": 201,
+ "train_noise": 0.06633333333333333,
+ "evidence": [
+  {
+   "lift": 1,
+   "recall": 0.9,
+   "precision": 0.06633333333333333,
+   "capped": false,
+   "flagged": 5548
+  },
+  {
+   "lift": 1.5,
+   "recall": 0.9,
+   "precision": 0.09949999999999999,
+   "capped": false,
+   "flagged": 3518
+  },
+  {
+   "lift": 2,
+   "recall": 0.9,
+   "precision": 0.13266666666666665,
+   "capped": false,
+   "flagged": 2736
+  },
+  {
+   "lift": 3,
+   "recall": 0.9,
+   "precision": 0.19899999999999998,
+   "capped": false,
+   "flagged": 1829
+  },
+  {
+   "lift": 5,
+   "recall": 0.9,
+   "precision": 0.33166666666666667,
+   "capped": false,
+   "flagged": 1058
+  },
+  {
+   "lift": 10,
+   "recall": 0.9,
+   "precision": 0.6633333333333333,
+   "capped": false,
+   "flagged": 537
+  },
+  {
+   "lift": 20,
+   "recall": 0.9,
+   "precision": 0.95,
+   "capped": true,
+   "flagged": 387
+  },
+  {
+   "lift": 3,
+   "recall": 0.5,
+   "precision": 0.19899999999999998,
+   "capped": false,
+   "flagged": 920
+  },
+  {
+   "lift": 10,
+   "recall": 0.5,
+   "precision": 0.6633333333333333,
+   "capped": false,
+   "flagged": 298
+  }
+ ],
+ "seconds": 313.0858907699585
+}

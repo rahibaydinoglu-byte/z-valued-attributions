@@ -1,0 +1,71 @@
+{
+ "dataset": "NF-CICIDS2018-v3",
+ "seed": 216,
+ "train_noise": 0.009333333333333334,
+ "evidence": [
+  {
+   "lift": 1,
+   "recall": 0.9,
+   "precision": 0.009333333333333334,
+   "capped": false,
+   "flagged": 5250
+  },
+  {
+   "lift": 1.5,
+   "recall": 0.9,
+   "precision": 0.014000000000000002,
+   "capped": false,
+   "flagged": 3286
+  },
+  {
+   "lift": 2,
+   "recall": 0.9,
+   "precision": 0.018666666666666668,
+   "capped": false,
+   "flagged": 2786
+  },
+  {
+   "lift": 3,
+   "recall": 0.9,
+   "precision": 0.028000000000000004,
+   "capped": false,
+   "flagged": 1857
+  },
+  {
+   "lift": 5,
+   "recall": 0.9,
+   "precision": 0.04666666666666667,
+   "capped": false,
+   "flagged": 986
+  },
+  {
+   "lift": 10,
+   "recall": 0.9,
+   "precision": 0.09333333333333334,
+   "capped": false,
+   "flagged": 546
+  },
+  {
+   "lift": 20,
+   "recall": 0.9,
+   "precision": 0.18666666666666668,
+   "capped": false,
+   "flagged": 268
+  },
+  {
+   "lift": 3,
+   "recall": 0.5,
+   "precision": 0.028000000000000004,
+   "capped": false,
+   "flagged": 1107
+  },
+  {
+   "lift": 10,
+   "recall": 0.5,
+   "precision": 0.09333333333333334,
+   "capped": false,
+   "flagged": 182
+  }
+ ],
+ "seconds": 328.9747896194458
+}
