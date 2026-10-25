@@ -1,0 +1,19 @@
+{
+ "seed": 100,
+ "fs": "A",
+ "unit_stats": {
+  "fh": {
+   "units": 4552,
+   "flagged_units": 319,
+   "mean_flagged_size": 5.539184952978056,
+   "max_size": 350
+  },
+  "fs": {
+   "units": 4318,
+   "flagged_units": 85,
+   "mean_flagged_size": 20.788235294117648,
+   "max_size": 350
+  }
+ },
+ "seconds": 78.2081527709961
+}
