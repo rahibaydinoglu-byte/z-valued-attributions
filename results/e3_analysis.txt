@@ -1,0 +1,31 @@
+  r[(e, "best")] = np.nanmax([auc(y, s) for s in base.values()])
+runs 60 {'NF-CICIDS2018-v3': 20, 'NF-ToN-IoT-v3': 20, 'NF-UNSW-NB15-v3': 20}
+
+=== NF-CICIDS2018-v3 (train noise 0.025; capped levels: [])
+  [rel] best baseline 0.779 | L1=0.814  L1.5=0.817  L2=0.822  L3=0.827  L5=0.857  L10=0.913  L20=0.972 | r=0.5: L3=0.821 L10=0.861
+      H9 Spearman(L, mean AUROC) = 1.000; L20 > L1 p = 9.5e-07
+      fixed sequence (L, mean diff vs best baseline, p): [(20, np.float64(0.192), '9.5e-07'), (10, np.float64(0.134), '9.5e-07'), (5, np.float64(0.078), '1.3e-05'), (3, np.float64(0.048), '5.1e-04'), (2, np.float64(0.042), '2.4e-03'), (1.5, np.float64(0.038), '7.7e-03'), (1, np.float64(0.035), '1.2e-02')] -> L* = 1
+  [sign] best baseline 0.883 | L1=0.889  L1.5=0.900  L2=0.909  L3=0.922  L5=0.944  L10=0.970  L20=0.989 | r=0.5: L3=0.904 L10=0.948
+      H9 Spearman(L, mean AUROC) = 1.000; L20 > L1 p = 9.5e-07
+      fixed sequence (L, mean diff vs best baseline, p): [(20, np.float64(0.106), '9.5e-07'), (10, np.float64(0.088), '9.5e-07'), (5, np.float64(0.062), '4.8e-06'), (3, np.float64(0.039), '1.0e-04'), (2, np.float64(0.026), '6.8e-03'), (1.5, np.float64(0.017), '5.7e-02')] -> L* = 2
+  [abs] best baseline 0.783 | L1=0.766  L1.5=0.765  L2=0.767  L3=0.769  L5=0.795  L10=0.876  L20=0.962 | r=0.5: L3=0.766 L10=0.799
+
+=== NF-ToN-IoT-v3 (train noise 0.118; capped levels: [5, 10, 20])
+  [rel] best baseline 0.737 | L1=0.734  L1.5=0.721  L2=0.725  L3=0.800  L5=0.912  L10=0.974  L20=0.981 | r=0.5: L3=0.726 L10=0.857
+      H9 Spearman(L, mean AUROC) = 0.893; L20 > L1 p = 9.5e-07
+      fixed sequence (L, mean diff vs best baseline, p): [(20, np.float64(0.244), '9.5e-07'), (10, np.float64(0.237), '9.5e-07'), (5, np.float64(0.175), '9.5e-07'), (3, np.float64(0.063), '3.2e-03'), (2, np.float64(-0.012), '7.4e-01')] -> L* = 3
+  [sign] best baseline 0.856 | L1=0.842  L1.5=0.892  L2=0.928  L3=0.959  L5=0.985  L10=0.995  L20=0.999 | r=0.5: L3=0.930 L10=0.981
+      H9 Spearman(L, mean AUROC) = 1.000; L20 > L1 p = 9.5e-07
+      fixed sequence (L, mean diff vs best baseline, p): [(20, np.float64(0.143), '9.5e-07'), (10, np.float64(0.14), '9.5e-07'), (5, np.float64(0.13), '1.9e-06'), (3, np.float64(0.103), '6.7e-06'), (2, np.float64(0.072), '1.6e-04'), (1.5, np.float64(0.037), '8.6e-03'), (1, np.float64(-0.013), '8.2e-01')] -> L* = 1.5
+  [abs] best baseline 0.759 | L1=0.758  L1.5=0.747  L2=0.748  L3=0.789  L5=0.862  L10=0.960  L20=0.983 | r=0.5: L3=0.749 L10=0.833
+
+=== NF-UNSW-NB15-v3 (train noise 0.015; capped levels: [])
+  [rel] best baseline 0.812 | L1=0.636  L1.5=0.636  L2=0.635  L3=0.636  L5=0.639  L10=0.654  L20=0.756 | r=0.5: L3=0.635 L10=0.639
+      H9 Spearman(L, mean AUROC) = 0.821; L20 > L1 p = nan
+      fixed sequence (L, mean diff vs best baseline, p): [(20, np.float64(-0.056), '6.3e-01')] -> L* = none
+  [sign] best baseline 0.949 | L1=0.958  L1.5=0.954  L2=0.954  L3=0.956  L5=0.966  L10=0.971  L20=0.981 | r=0.5: L3=0.958 L10=0.954
+      H9 Spearman(L, mean AUROC) = 0.786; L20 > L1 p = nan
+      fixed sequence (L, mean diff vs best baseline, p): [(20, np.float64(0.032), '4.3e-04'), (10, np.float64(0.022), '4.8e-03'), (5, np.float64(0.017), '1.7e-02'), (3, np.float64(0.007), '1.1e-01')] -> L* = 5
+  [abs] best baseline 0.921 | L1=0.748  L1.5=0.744  L2=0.743  L3=0.735  L5=0.743  L10=0.778  L20=0.879 | r=0.5: L3=0.743 L10=0.743
+
+L* summary: {('NF-CICIDS2018-v3', 'rel'): 1, ('NF-CICIDS2018-v3', 'sign'): 2, ('NF-ToN-IoT-v3', 'rel'): 3, ('NF-ToN-IoT-v3', 'sign'): 1.5, ('NF-UNSW-NB15-v3', 'rel'): 'none', ('NF-UNSW-NB15-v3', 'sign'): 5}

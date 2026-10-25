@@ -1,0 +1,51 @@
+  np.nanmax([auc(y[msk], s[msk]) for s in base.values()]))
+  r["best"] = r.get("best", {}); r["best"][e] = np.nanmax([r["auc"][(e, b)] for b in BASE])
+  np.nanmax([auc(y[msk], s[msk]) for s in base.values()]))
+runs 60 {'NF-CICIDS2018-v3': 20, 'NF-ToN-IoT-v3': 20, 'NF-UNSW-NB15-v3': 20}
+
+=== NF-CICIDS2018-v3: noise 0.026 (M1a 0.015, M1b 0.011, M2 0.0000) | prior rho-AUC 0.610 | TSK 0.939 vs GB 0.978 | lost max 4.6e-05
+  [rel] best-base 0.779 | S=0.583  bootSD=0.569  |phi|=0.273  bootSD/|phi|=0.775  CL=0.699  PROV=0.791  PROV+ii=0.790  BLK-FS=0.838  CONST=0.811  ORACLE=1.000
+  [sign] best-base 0.883 | S=0.588  bootSD=0.596  |phi|=0.170  bootSD/|phi|=0.882  CL=0.778  PROV=0.884  PROV+ii=0.877  BLK-FS=0.915  CONST=0.889  ORACLE=1.000
+  [abs] best-base 0.783 | S=0.717  bootSD=0.707  |phi|=0.734  bootSD/|phi|=0.455  CL=0.708  PROV=0.730  PROV+ii=0.727  BLK-FS=0.785  CONST=0.766  ORACLE=1.000
+
+=== NF-ToN-IoT-v3: noise 0.119 (M1a 0.082, M1b 0.030, M2 0.0062) | prior rho-AUC 0.486 | TSK 0.925 vs GB 0.955 | lost max 5.5e-04
+  [rel] best-base 0.737 | S=0.579  bootSD=0.582  |phi|=0.347  bootSD/|phi|=0.730  CL=0.661  PROV=0.730  PROV+ii=0.723  BLK-FS=0.743  CONST=0.734  ORACLE=0.999
+  [sign] best-base 0.856 | S=0.553  bootSD=0.569  |phi|=0.209  bootSD/|phi|=0.856  CL=0.746  PROV=0.774  PROV+ii=0.827  BLK-FS=0.765  CONST=0.842  ORACLE=1.000
+  [abs] best-base 0.759 | S=0.736  bootSD=0.712  |phi|=0.724  bootSD/|phi|=0.460  CL=0.681  PROV=0.734  PROV+ii=0.707  BLK-FS=0.713  CONST=0.758  ORACLE=1.000
+
+=== NF-UNSW-NB15-v3: noise 0.015 (M1a 0.011, M1b 0.004, M2 0.0000) | prior rho-AUC 0.721 | TSK 0.867 vs GB 0.999 | lost max 4.2e-05
+  [rel] best-base 0.812 | S=0.595  bootSD=0.605  |phi|=0.400  bootSD/|phi|=0.639  CL=0.678  PROV=0.633  PROV+ii=0.617  BLK-FS=0.652  CONST=0.636  ORACLE=1.000
+  [sign] best-base 0.949 | S=0.591  bootSD=0.550  |phi|=0.052  bootSD/|phi|=0.949  CL=0.951  PROV=0.938  PROV+ii=0.900  BLK-FS=0.944  CONST=0.958  ORACLE=1.000
+  [abs] best-base 0.921 | S=0.714  bootSD=0.722  |phi|=0.894  bootSD/|phi|=0.245  CL=0.892  PROV=0.743  PROV+ii=0.711  BLK-FS=0.809  CONST=0.748  ORACLE=1.000
+
+H1-E2  Z[BLK-FS] > best baseline (per dataset, Holm over 6):
+   NF-CICIDS2018-v3   rel : diff +0.059  wins 16/20  p 1.05e-04  Holm 6.29e-04
+   NF-CICIDS2018-v3   sign: diff +0.032  wins 11/20  p 6.15e-02  Holm 3.08e-01
+   NF-ToN-IoT-v3      rel : diff +0.006  wins 10/20  p 4.06e-01  Holm 1.00e+00
+   NF-ToN-IoT-v3      sign: diff -0.090  wins 3/20  p 1.00e+00  Holm 1.00e+00
+   NF-UNSW-NB15-v3    rel : diff -0.160  wins 6/19  p 9.80e-01  Holm 1.00e+00
+   NF-UNSW-NB15-v3    sign: diff -0.005  wins 6/19  p 7.67e-01  Holm 1.00e+00
+H2-E2  Z[BLK-FS] > Z[CONST] (Holm over 6):
+   NF-CICIDS2018-v3   rel : diff +0.027  Holm p 1.36e-01
+   NF-CICIDS2018-v3   sign: diff +0.026  Holm p 7.99e-02
+   NF-ToN-IoT-v3      rel : diff +0.009  Holm p 1.00e+00
+   NF-ToN-IoT-v3      sign: diff -0.077  Holm p 1.00e+00
+   NF-UNSW-NB15-v3    rel : diff +0.016  Holm p 1.36e-01
+   NF-UNSW-NB15-v3    sign: diff -0.014  Holm p 1.00e+00
+H8 dose-response Spearman(prior rho-AUC, gain): {'rel': (np.float64(0.117), 'Holm p 1.89e-01'), 'sign': (np.float64(0.55), 'Holm p 6.46e-06')}
+H5-E2 Brier BLK-FS < PROV: {'rel': (np.float64(-0.0608), '56/60', 'Holm p 2.81e-10'), 'sign': (np.float64(-0.0055), '50/60', 'Holm p 1.65e-05')}
+   calib [rel] PROV    meanP 0.146 vs rate 0.344
+   calib [rel] BLK-FS  meanP 0.237 vs rate 0.344
+   calib [rel] ORACLE  meanP 0.345 vs rate 0.344
+   calib [sign] PROV    meanP 0.054 vs rate 0.059
+   calib [sign] BLK-FS  meanP 0.089 vs rate 0.059
+   calib [sign] ORACLE  meanP 0.059 vs rate 0.059
+Friedman [rel] n=59 p=4.8e-32 CD=1.56: BLK-FS=2.96, CONST=3.61, bootSD/|phi|=3.95, PROV=4.25, PROV+ii=4.49, CL=4.76, bootSD=6.46, S=6.63, |phi|=7.90
+Friedman [sign] n=59 p=2.9e-64 CD=1.56: bootSD/|phi|=2.88, CONST=2.98, BLK-FS=3.65, PROV+ii=3.70, PROV=4.02, CL=4.12, S=7.31, bootSD=7.34, |phi|=9.00
+Friedman [abs] n=60 p=2.1e-32 CD=1.55: CONST=3.57, BLK-FS=3.60, |phi|=3.83, CL=4.33, PROV=4.78, PROV+ii=5.13, S=5.37, bootSD=5.53, bootSD/|phi|=8.85
+  strata NF-CICIDS2018-v3 [rel] near: rate 0.262, Z 0.832 vs base 0.777 | far: rate 0.231, Z 0.849 vs base 0.789
+  strata NF-CICIDS2018-v3 [sign] near: rate 0.052, Z 0.900 vs base 0.872 | far: rate 0.044, Z 0.923 vs base 0.888
+  strata NF-ToN-IoT-v3    [rel] near: rate 0.447, Z 0.760 vs base 0.732 | far: rate 0.461, Z 0.746 vs base 0.739
+  strata NF-ToN-IoT-v3    [sign] near: rate 0.104, Z 0.756 vs base 0.848 | far: rate 0.109, Z 0.757 vs base 0.838
+  strata NF-UNSW-NB15-v3  [rel] near: rate 0.334, Z 0.647 vs base 0.810 | far: rate 0.331, Z 0.661 vs base 0.811
+  strata NF-UNSW-NB15-v3  [sign] near: rate 0.021, Z 0.934 vs base 0.931 | far: rate 0.022, Z 0.940 vs base 0.950

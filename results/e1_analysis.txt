@@ -1,0 +1,97 @@
+/home/claude/e1_analyze.py:32: RuntimeWarning: All-NaN axis encountered
+  r["strata"][(e, st, "best_base")] = np.nanmax([auc_mean(y[msk], s[msk]) for s in base.values()])
+/home/claude/e1_analyze.py:32: RuntimeWarning: All-NaN axis encountered
+  r["strata"][(e, st, "best_base")] = np.nanmax([auc_mean(y[msk], s[msk]) for s in base.values()])
+runs: 40  (seeds [100, 101, 102]..., FS ['A', 'B'])
+TSK AUC(clean) 0.975 ± 0.007 | HistGB 0.978 ± 0.015
+rho-AUC CL: 0.507
+rho-AUC PROV: 0.843
+rho-AUC PROV-AUD: 0.881
+max lattice lost mass: 4.0e-03
+
+[rel]  best-baseline/run 0.743
+   S              0.523 ± 0.116
+   bootSD         0.604 ± 0.110
+   |phi|          0.377 ± 0.124
+   bootSD/|phi|   0.727 ± 0.120
+   Z[CL]          0.610 ± 0.060
+   Z[PROV]        0.825 ± 0.064
+   Z[PROV-AUD]    0.811 ± 0.079
+   Z[CONST]       0.752 ± 0.070
+   Z[ORACLE]      1.000 ± 0.000
+   H1  Z[PROV] - best baseline: +0.082, wins 33/40, one-sided Wilcoxon p = 3.23e-07
+       vs S            : +0.301  p = 9.1e-13
+       vs bootSD       : +0.220  p = 9.1e-13
+       vs |phi|        : +0.448  p = 9.1e-13
+       vs bootSD/|phi| : +0.098  p = 1.0e-07
+   H2  Z[PROV] - Z[CONST]: +0.073, wins 38/40, p = 4.87e-10
+       Z[PROV-AUD] - best baseline: +0.068, p = 4.08e-06
+   calib PROV     : meanP 0.145 vs rate 0.224  |gap| 0.086  Brier 0.1509
+   calib PROV-AUD : meanP 0.046 vs rate 0.224  |gap| 0.178  Brier 0.1763
+   calib CL       : meanP 0.001 vs rate 0.224  |gap| 0.224  Brier 0.2233
+   calib ORACLE   : meanP 0.224 vs rate 0.224  |gap| 0.002  Brier 0.0029
+   Friedman chi2 = 219.2, p = 1.0e-43; Nemenyi CD = 1.66; mean ranks: Z[PROV]=1.65, Z[PROV-AUD]=1.85, Z[CONST]=3.48, bootSD/|phi|=3.92, Z[CL]=5.38, bootSD=5.55, S=6.35, |phi|=7.83
+   stratum S1_wed      : event rate 0.171 | Z[PROV] 0.841 vs best base 0.755
+   stratum S2_thu_pm   : event rate 0.277 | Z[PROV] 0.803 vs best base 0.757
+   stratum S3_fri_ddos : event rate 0.240 | Z[PROV] 0.795 vs best base 0.725
+   stratum S4_clean    : event rate 0.208 | Z[PROV] 0.803 vs best base 0.790
+
+[sign]  best-baseline/run 0.745
+   S              0.555 ± 0.129
+   bootSD         0.596 ± 0.118
+   |phi|          0.386 ± 0.162
+   bootSD/|phi|   0.692 ± 0.130
+   Z[CL]          0.602 ± 0.056
+   Z[PROV]        0.834 ± 0.092
+   Z[PROV-AUD]    0.831 ± 0.096
+   Z[CONST]       0.755 ± 0.094
+   Z[ORACLE]      1.000 ± 0.000
+   H1  Z[PROV] - best baseline: +0.088, wins 32/40, one-sided Wilcoxon p = 4.79e-07
+       vs S            : +0.278  p = 1.9e-10
+       vs bootSD       : +0.238  p = 2.8e-10
+       vs |phi|        : +0.447  p = 6.4e-12
+       vs bootSD/|phi| : +0.142  p = 1.8e-12
+   H2  Z[PROV] - Z[CONST]: +0.079, wins 35/40, p = 8.17e-08
+       Z[PROV-AUD] - best baseline: +0.086, p = 7.72e-07
+   calib PROV     : meanP 0.060 vs rate 0.092  |gap| 0.035  Brier 0.0696
+   calib PROV-AUD : meanP 0.017 vs rate 0.092  |gap| 0.074  Brier 0.0773
+   calib CL       : meanP 0.000 vs rate 0.092  |gap| 0.091  Brier 0.0914
+   calib ORACLE   : meanP 0.092 vs rate 0.092  |gap| 0.001  Brier 0.0008
+   Friedman chi2 = 180.0, p = 2.0e-35; Nemenyi CD = 1.66; mean ranks: Z[PROV-AUD]=1.70, Z[PROV]=2.00, Z[CONST]=3.42, bootSD/|phi|=4.90, bootSD=5.40, S=5.55, Z[CL]=5.62, |phi|=7.40
+   stratum S1_wed      : event rate 0.074 | Z[PROV] 0.831 vs best base 0.761
+   stratum S2_thu_pm   : event rate 0.116 | Z[PROV] 0.817 vs best base 0.767
+   stratum S3_fri_ddos : event rate 0.118 | Z[PROV] 0.720 vs best base 0.775
+   stratum S4_clean    : event rate 0.059 | Z[PROV] 0.889 vs best base 0.850
+
+[abs]  best-baseline/run 0.779
+   S              0.666 ± 0.102
+   bootSD         0.725 ± 0.125
+   |phi|          0.696 ± 0.113
+   bootSD/|phi|   0.544 ± 0.130
+   Z[CL]          0.600 ± 0.078
+   Z[PROV]        0.838 ± 0.081
+   Z[PROV-AUD]    0.801 ± 0.087
+   Z[CONST]       0.743 ± 0.096
+   Z[ORACLE]      1.000 ± 0.000
+   H1  Z[PROV] - best baseline: +0.059, wins 31/40, one-sided Wilcoxon p = 3.75e-06
+       vs S            : +0.173  p = 9.1e-13
+       vs bootSD       : +0.113  p = 7.9e-09
+       vs |phi|        : +0.142  p = 3.9e-11
+       vs bootSD/|phi| : +0.294  p = 1.3e-11
+   H2  Z[PROV] - Z[CONST]: +0.096, wins 37/40, p = 5.00e-11
+       Z[PROV-AUD] - best baseline: +0.022, p = 2.74e-02
+   calib PROV     : meanP 0.209 vs rate 0.254  |gap| 0.062  Brier 0.1792
+   calib PROV-AUD : meanP 0.064 vs rate 0.254  |gap| 0.190  Brier 0.1865
+   calib CL       : meanP 0.001 vs rate 0.254  |gap| 0.253  Brier 0.2527
+   calib ORACLE   : meanP 0.253 vs rate 0.254  |gap| 0.002  Brier 0.0029
+   Friedman chi2 = 176.2, p = 1.3e-34; Nemenyi CD = 1.66; mean ranks: Z[PROV]=1.62, Z[PROV-AUD]=2.27, Z[CONST]=3.62, bootSD=4.30, |phi|=4.75, S=5.83, Z[CL]=6.75, bootSD/|phi|=6.85
+   stratum S1_wed      : event rate 0.189 | Z[PROV] 0.800 vs best base 0.740
+   stratum S2_thu_pm   : event rate 0.321 | Z[PROV] 0.845 vs best base 0.800
+   stratum S3_fri_ddos : event rate 0.270 | Z[PROV] 0.811 vs best base 0.766
+   stratum S4_clean    : event rate 0.234 | Z[PROV] 0.852 vs best base 0.831
+
+Holm (primary rel, sign): [('rel', np.float64(6.459667929448187e-07)), ('sign', np.float64(4.791936589754187e-07))]
+
+Sensitivity (n = 10 runs):
+  [rel] Z[PROV-AUD]=0.860  Z[PROV]=0.849  Z[PROV_pad0]=0.851  Z[PROV_pad1]=0.851  Z[PROV_pad5]=0.843  Z[PROV_rp0.3]=0.866  Z[PROV_rp0.7]=0.827  Z[PROV_rw0.1]=0.844  Z[PROV_rw0.3]=0.856
+  [sign] Z[PROV-AUD]=0.934  Z[PROV]=0.896  Z[PROV_pad0]=0.885  Z[PROV_pad1]=0.898  Z[PROV_pad5]=0.890  Z[PROV_rp0.3]=0.917  Z[PROV_rp0.7]=0.870  Z[PROV_rw0.1]=0.871  Z[PROV_rw0.3]=0.916

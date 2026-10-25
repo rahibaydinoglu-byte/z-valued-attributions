@@ -1,0 +1,47 @@
+runs 40 | seeds 120 .. 139
+TSK AUC 0.974 | GB 0.980 | lost max 8.8e-03
+
+[rel] best baseline/run AUROC 0.746
+   PROV      AUROC 0.850 ± 0.071 | Brier 0.1440 | meanP 0.160 vs rate 0.234 (|gap| 0.075)
+   BLK-FS    AUROC 0.867 ± 0.068 | Brier 0.1265 | meanP 0.233 vs rate 0.234 (|gap| 0.040)
+   BLK-FMH   AUROC 0.865 ± 0.069 | Brier 0.1262 | meanP 0.175 vs rate 0.234 (|gap| 0.060)
+   PROV-AUD  AUROC 0.844 ± 0.060 | Brier 0.1795 | meanP 0.049 vs rate 0.234 (|gap| 0.185)
+   CONST     AUROC 0.763 ± 0.071 | Brier 0.2097 | meanP 0.024 vs rate 0.234 (|gap| 0.210)
+   CL        AUROC 0.612 ± 0.058 | Brier 0.2331 | meanP 0.001 vs rate 0.234 (|gap| 0.233)
+   ORACLE    AUROC 1.000 ± 0.000 | Brier 0.0028 | meanP 0.234 vs rate 0.234 (|gap| 0.002)
+   H5 Brier BLK-FS < PROV: diff -0.0176, wins 30/40, p = 1.77e-05
+   H6 AUROC BLK-FS > best baseline: diff +0.121, wins 38/40, p = 1.73e-11
+   H7 AUROC BLK-FS vs PROV: diff +0.017, two-sided p = 1.30e-02
+   H1-rep PROV > best baseline: diff +0.104, p = 8.00e-11; H2-rep PROV > CONST: diff +0.087, p = 1.27e-11
+   Friedman p = 2.0e-59; CD = 2.14; ranks: BLK-FMH=2.15, BLK-FS=2.20, PROV-AUD=2.95, PROV=3.17, CONST=5.30, bootSD/|phi|=6.10, CL=7.53, bootSD=7.60, S=8.15, |phi|=9.85
+
+[sign] best baseline/run AUROC 0.728
+   PROV      AUROC 0.865 ± 0.090 | Brier 0.0672 | meanP 0.063 vs rate 0.096 (|gap| 0.035)
+   BLK-FS    AUROC 0.911 ± 0.046 | Brier 0.0619 | meanP 0.095 vs rate 0.096 (|gap| 0.024)
+   BLK-FMH   AUROC 0.902 ± 0.065 | Brier 0.0604 | meanP 0.070 vs rate 0.096 (|gap| 0.030)
+   PROV-AUD  AUROC 0.842 ± 0.083 | Brier 0.0788 | meanP 0.018 vs rate 0.096 (|gap| 0.078)
+   CONST     AUROC 0.749 ± 0.088 | Brier 0.0915 | meanP 0.010 vs rate 0.096 (|gap| 0.086)
+   CL        AUROC 0.608 ± 0.060 | Brier 0.0958 | meanP 0.000 vs rate 0.096 (|gap| 0.096)
+   ORACLE    AUROC 1.000 ± 0.000 | Brier 0.0008 | meanP 0.096 vs rate 0.096 (|gap| 0.001)
+   H5 Brier BLK-FS < PROV: diff -0.0053, wins 29/40, p = 2.79e-03
+   H6 AUROC BLK-FS > best baseline: diff +0.183, wins 39/40, p = 1.82e-12
+   H7 AUROC BLK-FS vs PROV: diff +0.047, two-sided p = 3.57e-04
+   H1-rep PROV > best baseline: diff +0.136, p = 6.93e-10; H2-rep PROV > CONST: diff +0.116, p = 1.88e-10
+   Friedman p = 2.6e-58; CD = 2.14; ranks: BLK-FMH=1.98, BLK-FS=2.05, PROV=3.10, PROV-AUD=3.27, CONST=5.53, bootSD/|phi|=6.55, CL=7.35, bootSD=7.55, S=7.83, |phi|=9.80
+
+[abs] best baseline/run AUROC 0.761
+   PROV      AUROC 0.828 ± 0.063 | Brier 0.1867 | meanP 0.221 vs rate 0.269 (|gap| 0.060)
+   BLK-FS    AUROC 0.866 ± 0.050 | Brier 0.1369 | meanP 0.266 vs rate 0.269 (|gap| 0.057)
+   BLK-FMH   AUROC 0.855 ± 0.054 | Brier 0.1503 | meanP 0.218 vs rate 0.269 (|gap| 0.061)
+   PROV-AUD  AUROC 0.801 ± 0.073 | Brier 0.2097 | meanP 0.056 vs rate 0.269 (|gap| 0.213)
+   CONST     AUROC 0.718 ± 0.098 | Brier 0.2395 | meanP 0.045 vs rate 0.269 (|gap| 0.224)
+   CL        AUROC 0.576 ± 0.065 | Brier 0.2686 | meanP 0.001 vs rate 0.269 (|gap| 0.269)
+   ORACLE    AUROC 1.000 ± 0.001 | Brier 0.0027 | meanP 0.269 vs rate 0.269 (|gap| 0.002)
+   H5 Brier BLK-FS < PROV: diff -0.0498, wins 36/40, p = 5.00e-11
+   H6 AUROC BLK-FS > best baseline: diff +0.105, wins 39/40, p = 1.82e-12
+   H7 AUROC BLK-FS vs PROV: diff +0.038, two-sided p = 4.47e-08
+   H1-rep PROV > best baseline: diff +0.067, p = 4.53e-09; H2-rep PROV > CONST: diff +0.109, p = 3.92e-09
+   Friedman p = 1.4e-53; CD = 2.14; ranks: BLK-FS=1.70, BLK-FMH=2.00, PROV=3.40, PROV-AUD=3.80, CONST=5.65, bootSD=6.08, |phi|=7.42, S=7.67, bootSD/|phi|=8.45, CL=8.82
+
+Holm H5 (rel, sign): {'rel': np.float64(3.545586332620587e-05), 'sign': np.float64(0.0027884997971341363)}
+Holm H6 (rel, sign): {'sign': np.float64(3.637978807091713e-12), 'rel': np.float64(1.7280399333685637e-11)}

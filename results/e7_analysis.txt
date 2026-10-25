@@ -1,0 +1,22 @@
+(a) threshold sensitivity, relative change: Z[BLK, Gaussian] vs best baseline (n=20 subsamples)
+  kappa 0.25 tau0 0.025: rate 0.375 | Z 0.845 best 0.723 diff +0.123 (20/20, p 9.5e-07) | vs bootSD/|phi| 0.701 diff +0.144 (p 9.5e-07)
+  kappa 0.25 tau0  0.05: rate 0.334 | Z 0.848 best 0.712 diff +0.135 (20/20, p 9.5e-07) | vs bootSD/|phi| 0.681 diff +0.167 (p 9.5e-07)
+  kappa 0.25 tau0   0.1: rate 0.271 | Z 0.859 best 0.710 diff +0.149 (20/20, p 9.5e-07) | vs bootSD/|phi| 0.659 diff +0.200 (p 9.5e-07)
+  kappa  0.5 tau0 0.025: rate 0.260 | Z 0.891 best 0.760 diff +0.131 (20/20, p 9.5e-07) | vs bootSD/|phi| 0.750 diff +0.141 (p 9.5e-07)
+  kappa  0.5 tau0  0.05: rate 0.234 | Z 0.886 best 0.746 diff +0.141 (20/20, p 9.5e-07) | vs bootSD/|phi| 0.725 diff +0.161 (p 9.5e-07)
+  kappa  0.5 tau0   0.1: rate 0.195 | Z 0.895 best 0.730 diff +0.165 (20/20, p 9.5e-07) | vs bootSD/|phi| 0.704 diff +0.191 (p 9.5e-07)
+  kappa  1.0 tau0 0.025: rate 0.168 | Z 0.932 best 0.799 diff +0.133 (20/20, p 9.5e-07) | vs bootSD/|phi| 0.792 diff +0.140 (p 9.5e-07)
+  kappa  1.0 tau0  0.05: rate 0.152 | Z 0.930 best 0.778 diff +0.152 (20/20, p 9.5e-07) | vs bootSD/|phi| 0.768 diff +0.162 (p 9.5e-07)
+  kappa  1.0 tau0   0.1: rate 0.131 | Z 0.930 best 0.764 diff +0.166 (20/20, p 9.5e-07) | vs bootSD/|phi| 0.740 diff +0.190 (p 9.5e-07)
+sign change, dead zone tau0:
+  tau0 0.025: rate 0.100 | Z 0.916 best 0.736 diff +0.180 (20/20, p 9.5e-07)
+  tau0  0.05: rate 0.096 | Z 0.913 best 0.728 diff +0.185 (20/20, p 9.5e-07)
+  tau0   0.1: rate 0.090 | Z 0.917 best 0.719 diff +0.198 (20/20, p 9.5e-07)
+
+(b) Attempted -> attack policy (noise in training sample: main 0.0432, variant 0.0398)
+  [rel] rate 0.224 | best baseline 0.746 | Z gauss 0.883 (+0.138, 20/20, p 9.5e-07) | Z lattice 0.861 (+0.116, 20/20, p 9.5e-07)
+  [sign] rate 0.086 | best baseline 0.728 | Z gauss 0.920 (+0.191, 20/20, p 9.5e-07) | Z lattice 0.914 (+0.185, 20/20, p 9.5e-07)
+
+(c) interval-valued B over the evidence box (rho_win 0.1-0.3, rho_pay 0.3-0.7)
+  [rel] mean width 0.127 | Spearman(width, |mid - y|) within midpoint deciles 0.486 (positive in 20/20 subsamples) | Brier by width tercile low/mid/high: 0.013 / 0.120 / 0.203
+  [sign] mean width 0.064 | Spearman(width, |mid - y|) within midpoint deciles 0.782 (positive in 20/20 subsamples) | Brier by width tercile low/mid/high: 0.000 / 0.013 / 0.161

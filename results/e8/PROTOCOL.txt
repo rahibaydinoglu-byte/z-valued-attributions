@@ -1,0 +1,3 @@
+E8 (M2.3) protocol, fixed 25.10.2026 before seeds 141-150 were run. Seed 140 = smoke test (reported separately, not in the test).
+Primary: Z[BLK-FS, Gaussian] AUROC > best label-blind baseline per run, relative and sign change; one-sided Wilcoxon over 10 runs, Holm over 2.
+Secondary: Z > fixed comparator bootSD/|phi|; |meanP - rate|; TSK vs GB AUROC.
